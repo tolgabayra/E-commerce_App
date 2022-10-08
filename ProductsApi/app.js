@@ -9,8 +9,9 @@ const mongoose = require("mongoose")
 
 
 
-const productRoute = require("./routes/products")
-
+const productRoute = require("./routes/product")
+const shoesRoute = require("./routes/shoes")
+const watchesRoute = require("./routes/watches")
 
 dotenv.config()
 
@@ -31,6 +32,8 @@ app.use(morgan("dev"))
 
 
 app.use("/api/v1/products", productRoute)
+app.use("/api/v1/shoes", shoesRoute)
+app.use("/api/v1/watches", watchesRoute)
 
 
 
