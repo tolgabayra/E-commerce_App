@@ -3,8 +3,17 @@ const { listShoes } = require("../services/Shoes")
 const { listWatch } = require("../services/Watches")
 
 const createProduct = async (req, res) => {
-  const newProduct = new Product(req.body);
+  const {title, desc, categories,price} = req.body
+  const newProduct = new Product({
+    title: title,
+    desc: desc,
+    img: '/uploads/'+req.file.filename,
+    categories: categories,
+    price: price
 
+  })
+
+  console.log(newProduct);
   try {
     const savedProduct = await newProduct.save();
     res.status(200).json(savedProduct);
@@ -72,6 +81,8 @@ const getAllWatches = async (req, res) => {
     res.status(500).json(err)
   }
 }
+
+
 
 
 module.exports = {

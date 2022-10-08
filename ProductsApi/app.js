@@ -29,7 +29,8 @@ app.use(cors());
 app.use(express.json());
 app.use(helmet())
 app.use(morgan("dev"))
-
+app.use(express.static('public')); 
+app.use('/uploads', express.static('uploads'));
 
 app.use("/api/v1/products", productRoute)
 app.use("/api/v1/shoes", shoesRoute)
