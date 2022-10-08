@@ -6,7 +6,8 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Shoes from "./pages/Shoes";
 import Women from "./pages/Women";
-
+import Login from "./pages/Login"
+import Register from "./pages/Register"
 
 export default function Router(){
     return useRoutes([
@@ -23,6 +24,14 @@ export default function Router(){
             ]
 
         },
+        {
+            path: "/login",
+            element: <Login />
+        },
+        {
+            path: "/register",
+            element: <Register />
+        }
      
     ])
 }

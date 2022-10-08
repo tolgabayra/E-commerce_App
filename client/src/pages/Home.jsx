@@ -5,7 +5,7 @@ import Sproduct from '../components/home/Sproduct'
 import { Link } from 'react-router-dom'
 export default function Home() {
     return (
-        <div>
+        <div className='bg-indigo-50'>
 
 
             <div class="p-12 flex flex-wrap items-center justify-center pr-12">

@@ -1,98 +1,32 @@
 import React from 'react'
 
 export default function Sproduct() {
-  return (
-    <div>
-
-
-<div class="w-80 bg-white shadow rounded mr-4">
-                    <div
-                        class="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center"
-                        style={{ backgroundImage: `url(https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)` }}
-                    >
-                        <div class="flex justify-between">
-                            
-                          
-                        </div>
-                        <div>
-                            <span
-                                class="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium select-none"
-                            >
-                                available
-                            </span>
-                        </div>
+    return (
+        <div className="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+            <div className="bg-white rounded-lg m-h-64 p-2 transform hover:shadow-xl hover:translate-y-1 transition duration-300">
+                <figure className="mb-2">
+                    <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80" alt="" className="h-64 ml-auto mr-auto" />
+                </figure>
+                <div className="rounded-lg p-4 bg-purple-500 flex flex-col">
+                    <div>
+                        <h5 className="text-white text-2xl font-bold leading-none">
+                            iPhone 11
+                        </h5>
+                        <span className="text-xs text-gray-400 leading-none">Just the right amount of everything.</span>
                     </div>
-                    <div class="p-4 flex flex-col items-center">
-                        <p class="text-gray-400 font-light text-xs text-center">Hammond robotics</p>
-                        <h1 class="text-gray-800 text-center mt-1">Item name</h1>
-                        <p class="text-center text-gray-800 mt-1">€1299</p>
-                        <div class="inline-flex items-center mt-2">
-                            <button
-                                class="bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="h-6 w-4"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M20 12H4"
-                                    />
-                                </svg>
-                            </button>
-                            <div
-                                class="bg-gray-100 border-t border-b border-gray-100 text-gray-600 hover:bg-gray-100 inline-flex items-center px-4 py-1 select-none"
-                            >
-                                2
-                            </div>
-                            <button
-                                class="bg-white rounded-r border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="h-6 w-4"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M12 4v16m8-8H4"
-                                    />
-                                </svg>
-                            </button>
+                    <div className="flex items-center">
+                        <div className="text-lg text-white font-light">
+                            $699,00
                         </div>
-
-                        <button
-                            class="py-2 px-4 bg-purple-500 text-white rounded hover:bg-purple-600 active:bg-purple-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center"
-                        >
-                            Add to order
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-6 w-6 ml-2"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                                />
+                        <button href="javascript:;" className="rounded-full bg-purple-800 text-white hover:bg-white hover:text-purple-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="stroke-current m-auto">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
                         </button>
                     </div>
                 </div>
-
-
-    </div>
-  )
+            </div>
+        </div>
+    )
 }
