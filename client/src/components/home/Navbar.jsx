@@ -1,7 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaShoppingCart } from "react-icons/fa"
+import { useSelector, useDispatch } from "react-redux"
+
+
 export default function Navbar() {
+    const dispatch = useDispatch()
+    const products = useSelector((state) => state.basket.products)
+    const quantity = useSelector((state) => state.basket.quantity)
+    const total = useSelector((state) => state.basket.total)
+    
     return (
         <div>
             <header>
@@ -16,10 +24,16 @@ export default function Navbar() {
 
 
                             <div className="dropdown dropdown-end">
-                                <label tabIndex={0} className="btn text-xs "><FaShoppingCart className='mr-2' />Basket <span className='ml-2 text-purple-200'>12</span></label>
-                                <ul tabIndex={0} className="dropdown-content menu p-1  mt-3 shadow bg-base-100 rounded-lg  w-52">
-                                    <li><a>Item 1</a></li>
-                                    <li><a>Item 2</a></li>
+                                
+                                <label tabIndex={0} className="btn text-xs "><FaShoppingCart className='mr-2' />Basket <span className='ml-2 text-purple-200'>{quantity}</span></label>
+                                <ul tabIndex={0} className="dropdown-content menu p-1  mt-3 shadow bg-base-100 rounded-lg  w-64">
+                                    {products.map(product=>(
+                                    <li><a>{product}</a></li>
+
+                                    ))}
+                                    <li><p className='text-purple-900 hover:bg-white'>Total: ${total}</p></li>
+                                    <li><a className='text-purple-700'>Go to details -&gt; </a></li>
+
                                 </ul>
                             </div>
                             
